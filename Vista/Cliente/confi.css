@@ -1,0 +1,341 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"],
+button {
+    cursor: pointer;
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #45a049;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Permite que el body crezca según el contenido */
+    height: 100vh;
+    background-image: url('../../imagenes/fondoEditar.jpg');
+    margin: 0;
+    overflow-x: hidden;
+    align-items: flex-start;
+     background-size: cover;
+}
+
+.register-container {
+    background-color: #FEDA00; 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+    width: 450px;
+    max-width: 90%; /* Se adapta a pantallas pequeñas */
+    text-align: center; /* Centra el texto del formulario */
+}
+
+h2 {
+    text-align: center;
+    color: #333; 
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 50px; 
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    background-color: #5cb85c; 
+    color: white;
+    border: none;
+    border-radius: 4px; 
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003f9c; /* Hover más oscuro */
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    flex-grow: 1;
+}
+
+.icon {
+    margin-left: 10px; /* Espacio entre el campo y el ícono */
+    font-size: 18px;
+}
+
+.icon-success {
+    color: green;
+    font-weight: bold;
+}
+
+.icon-error {
+    color: red;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+/* Estilos para el error de la contraseña */
+#error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    display: none;
+}
+/* Botones de acción */
+input[type="submit"],
+button[type="button"] {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo del botón de "Agregar Usuario" */
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+}
+/* Estilo del label */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo del select */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto hover y focus en el select */
+select:hover,
+select:focus {
+    border-color: #5cb85c;
+    outline: none;
+}
+
+/* Estilo de las opciones dentro del select */
+option {
+    padding: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 90%; /* Usa el 90% del ancho disponible */
+    max-width: 800px; /* Limita el tamaño máximo para hacerlo más compacto */
+    border-radius: 8px;
+    padding: 15px; /* Reduce el espacio interior */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Asegura que padding no sume al ancho total */
+}
+
+h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px; /* Reduce el margen inferior */
+}
+
+.user-details-container {
+    margin-bottom: 15px; /* Reduce el espacio entre bloques */
+    width: 100%;
+    white-space: normal; /* Ajusta texto largo en varias líneas */
+    overflow: hidden;
+}
+
+.user-details-container p {
+    margin: 5px 0;
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+    color: #555;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Diseño adaptable más compacto */
+    gap: 10px; /* Reduce el espacio entre los campos */
+    width: 100%;
+    background-color: #ecc31ff8;
+}
+
+.form-group {
+    margin-bottom: 8px; /* Reduce el margen inferior de los grupos */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px; /* Reduce el espacio debajo de las etiquetas */
+    color: #444;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 6px; /* Reduce el relleno */
+    font-size: 13px; /* Reduce el tamaño de la fuente */
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+small {
+    display: block;
+    font-size: 12px;
+    color: #888;
+}
+
+.form-actions {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 15px; /* Reduce el margen superior */
+}
+
+button.btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px; /* Reduce el tamaño de los botones */
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+a.btn-cancel {
+    margin-left: 8px; /* Reduce el espacio entre los botones */
+    background-color: #dc3545;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a.btn-cancel:hover {
+    background-color: #b02a37;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+}
+.form-actions {
+    text-align: center; /* Centra el contenido dentro del div */
+    margin-bottom: 0px; /* Espacio inferior entre grupos de botones */
+}
+
+.btn-details {
+    display: inline-block; /* Para que se comporte como un botón */
+    background-color: green; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    padding: 10px 15px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-left: 200px; /* Ajusta este valor para mover el botón más a la derecha */
+}
+
+.btn-details:hover {
+    background-color: darkgreen; /* Color más oscuro al pasar el mouse */
+}

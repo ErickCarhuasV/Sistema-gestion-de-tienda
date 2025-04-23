@@ -1,0 +1,500 @@
+:root {
+    --blue-primary: #0056b3;
+    --blue-secondary: #007bff;
+    --yellow-primary: #ffc107;
+    --white: #ffffff;
+    --gray-light: #f8f9fa;
+    --gray-dark: #ffc107;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar - posicionada a la izquierda */
+.sidebar {
+    width: 260px;
+    background-color: var(--blue-primary);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.sidebar-nav {
+    list-style-type: none;
+}
+
+.sidebar-nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: var(--blue-secondary);
+    color: #ffcc00;
+}
+
+.main-content {
+    max-width: 2500px;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: 450px; /* Ajusta el contenido para no solaparse con la barra lateral */
+}
+
+/* Asegura que el encabezado esté centrado */
+.main-content h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+    margin-bottom: 15px;
+}
+
+.search-container input#buscarProducto {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+    font-size: 14px;
+    transition: box-shadow 0.3s;
+}
+
+.search-container input#buscarProducto:focus {
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+    outline: none;
+}
+
+/* Botón de agregar producto */
+button#btn-agregar {
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 20px auto;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button#btn-agregar:hover {
+    background-color: #e6b800;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead th {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+tbody td {
+    padding: 8px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.product-container {
+    
+    align-items: center; /* Centra el contenido horizontalmente */
+    width: 900px; /* Ocupa todo el ancho disponible */
+    height: 600px; /* Altura completa de la ventana */
+    overflow-y: auto; /* Desplazamiento vertical solo si es necesario */
+    padding: 20px;
+    background-color: #f9f9f9;
+    
+    
+}
+
+.product-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.product-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.product-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Contenedor de cuadrícula de productos */
+.product-grid {
+    display: flex; /* Estilo de cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Crea 3 columnas de igual tamaño */
+    gap: 200px; /* Espacio entre las filas y columnas */
+    width: 100%; /* Ancho completo del contenedor */
+    max-width: 1200px; /* Limita el ancho máximo de la cuadrícula */
+    align-items: start; /* Alinea los ítems desde la parte superior */
+    justify-content: center; /* Centra las columnas dentro del contenedor */
+}
+
+/* Estilo para las tarjetas de productos */
+.product-card {
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    background-image: url('../../imagenes/producto.png');
+    background-size: contain; /* La imagen se ajusta completamente sin recortes */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%;
+    height: 220px; /* Ajusta la altura según sea necesario */
+    border-radius: 8px;
+}
+
+.form-container {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    text-align: left;
+}
+
+.form-container input[type="text"],
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#submitButton {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#submitButton:hover {
+    background-color: #002244;
+}
+
+#agregarSubfamiliaForm,
+#agregarLineaForm {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#agregarSubfamiliaForm label,
+#agregarLineaForm label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    text-align: left;
+}
+
+#agregarSubfamiliaForm input[type="text"],
+#agregarLineaForm input[type="text"],
+#agregarSubfamiliaForm select,
+#agregarLineaForm select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#agregarSubfamiliaForm button[type="submit"],
+#agregarLineaForm button[type="submit"] {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#agregarSubfamiliaForm button[type="submit"]:hover,
+#agregarLineaForm button[type="submit"]:hover {
+    background-color: #002244;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Estilos del sidebar */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #0066cc;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 15px;
+}
+
+.sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-nav i {
+    width: 20px;
+}
+
+/* Contenido principal */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    margin-bottom: 30px;
+}
+
+.search-container input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+/* Grid de productos */
+.product-container {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+/* Tarjetas de producto */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 15px;
+    color: #333;
+}
+
+.product-card p {
+    margin: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.product-card .product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0066cc;
+    margin: 15px;
+}
+
+.product-card button {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: calc(100% - 30px);
+}
+
+.product-card button:hover {
+    background: #0052a3;
+}
+
+button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Selects del sidebar */
+.sidebar select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+/* Mensajes de estado */
+.mensajes-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        padding: 10px;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}

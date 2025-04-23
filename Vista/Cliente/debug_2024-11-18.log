@@ -1,0 +1,64 @@
+
+2024-11-18 04:51:38 - Nueva solicitud
+Tipo: linea, ID: 2
+Query: SELECT ID_LINEA as value, DESCRIPCION_LINEA as text 
+                     FROM LINEA 
+                     WHERE ID_SECCION = :id 
+                     ORDER BY ID_LINEA
+Resultados encontrados: 5
+
+2024-11-18 04:51:47 - Nueva solicitud
+Tipo: linea, ID: 1
+Query: SELECT ID_LINEA as value, DESCRIPCION_LINEA as text 
+                     FROM LINEA 
+                     WHERE ID_SECCION = :id 
+                     ORDER BY ID_LINEA
+Resultados encontrados: 5
+
+2024-11-18 04:51:49 - Nueva solicitud
+Tipo: familia, ID: 1
+Query: SELECT ID_FAMILIA as value, DESCRIPCION_FAMILIA as text 
+                     FROM FAMILIA 
+                     WHERE ID_LINEA = :id 
+                     ORDER BY ID_FAMILIA
+Resultados encontrados: 2
+
+2024-11-18 04:51:51 - Nueva solicitud
+Tipo: subfamilia, ID: 1
+Query: SELECT ID_SUBFAMILIA as value, DESCRIPCION_SUBFAMILIA as text 
+                     FROM SUBFAMILIA 
+                     WHERE ID_FAMILIA = :id 
+                     ORDER BY ID_SUBFAMILIA
+Resultados encontrados: 3
+
+2024-11-18 04:52:40 - Nueva solicitud
+Tipo: seccion, ID: 1
+Query: SELECT ID_SECCION as value, DESCRIPCION_SECCION as text 
+                     FROM SECCION 
+                     WHERE ID_AREA = :id 
+                     ORDER BY ID_SECCION
+Resultados encontrados: 2
+
+2024-11-18 04:52:43 - Nueva solicitud
+Tipo: linea, ID: 1
+Query: SELECT ID_LINEA as value, DESCRIPCION_LINEA as text 
+                     FROM LINEA 
+                     WHERE ID_SECCION = :id 
+                     ORDER BY ID_LINEA
+Resultados encontrados: 5
+
+2024-11-18 04:52:45 - Nueva solicitud
+Tipo: familia, ID: 2
+Query: SELECT ID_FAMILIA as value, DESCRIPCION_FAMILIA as text 
+                     FROM FAMILIA 
+                     WHERE ID_LINEA = :id 
+                     ORDER BY ID_FAMILIA
+Resultados encontrados: 2
+
+2024-11-18 04:52:47 - Nueva solicitud
+Tipo: subfamilia, ID: 3
+Query: SELECT ID_SUBFAMILIA as value, DESCRIPCION_SUBFAMILIA as text 
+                     FROM SUBFAMILIA 
+                     WHERE ID_FAMILIA = :id 
+                     ORDER BY ID_SUBFAMILIA
+Resultados encontrados: 3

@@ -1,0 +1,248 @@
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes floatImage {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInError {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5d20e, #0051D4);
+    background-size: 200% 200%;
+    animation: fadeIn 1s ease-out, gradientBackground 10s ease infinite;
+    background-image: url('imagenes/INTERIOR.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen al contenedor */
+    background-position: center; /* Centrar la imagen */
+}
+
+/* Contenedor principal del login */
+.login-container {
+    display: flex;
+    width: 1000px; /* Aumenta el ancho del contenedor */
+    height: 600px; /* Aumenta la altura del contenedor */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 5px solid white; /* Borde blanco */
+}
+
+.login-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Sección izquierda */
+.login-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #003a8d, #0066ff);
+    padding: 20px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.welcome-image {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: floatImage 2s ease-in-out infinite;
+    transition: transform 0.4s ease;
+}
+
+.welcome-image:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Sección derecha */
+.login-right {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #efc313, #FEDA00);
+    box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.2);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+/* Títulos */
+h3 {
+    text-align: center;
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de campos con animación de shake */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    box-shadow: 0px 4px 12px rgba(0, 81, 212, 0.4), 0 0 15px rgba(0, 81, 212, 0.6);
+    animation: shake 0.3s;
+    outline: none;
+    background-color: #f0f8ff;
+}
+
+/* Botón de inicio de sesión */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #003f9c, #2467d3); /* Mezcla de colores */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: #00700f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: pulse 0.6s infinite;
+}
+
+/* Contenedor de registro */
+.register-container {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #0051D4; /* Cambia el color del fondo del contenedor a azul */
+    border-radius: 25px;
+    padding: 20px;
+}
+
+/* Botón de registro */
+.register-btn {
+    padding: 12px;
+    background-color: #c71f1f; /* Mantén el color rojo del botón */
+    border-radius: 30px;
+    color: rgb(255, 255, 255); /* Color del REGISTRATE */
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.5s ease;
+    box-shadow: 0 0 15px rgba(199, 31, 31, 0.6);
+    animation: shake 1s ease-in-out infinite; /* Añadir animación de movimiento */
+}
+
+.register-btn:hover {
+    background-color: #800404;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(199, 31, 31, 1);
+}
+
+/* Estilos para errores */
+.error {
+    color: red;
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    animation: fadeInError 0.5s ease forwards;
+}
+
+/* Estilos para redes sociales */
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px; /* Añade un padding para un mejor espaciado */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con algo de transparencia */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.social-media p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black; /* Cambia el color a negro */
+    font-weight: bold; /* Aumenta el peso de la fuente */
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0051d4; /* Color del texto de redes sociales */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición para el cambio de color */
+    border: 2px solid #0051d4; /* Borde para los enlaces */
+    border-radius: 10px; /* Bordes redondeados para los enlaces */
+    padding: 5px 10px; /* Padding para dar un efecto de botón */
+}
+
+.social-media a:hover {
+    color: #fff; /* Color blanco al pasar el ratón */
+    background-color: #0051d4; /* Fondo azul al pasar el ratón */
+}

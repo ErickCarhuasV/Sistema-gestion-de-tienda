@@ -1,0 +1,20 @@
+{
+    "name": "tuempresa/tienda",
+    "description": "Una tienda en línea",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Tuempresa\\Tienda\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Erick",
+            "email": "erick@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "tecnickcom/tcpdf": "^6.7"
+    }
+}

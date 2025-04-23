@@ -1,0 +1,42 @@
+[2024-12-11 21:44:48] Nueva solicitud
+Tipo: seccion, ID: 1
+Query: SELECT ID_SECCION AS value, DESCRIPCION_SECCION AS text 
+                      FROM SECCION 
+                      WHERE ID_AREA = :id 
+                      ORDER BY ID_SECCION
+Resultados encontrados: 2
+[2024-12-11 21:44:54] Nueva solicitud
+Tipo: linea, ID: 1
+Query: SELECT ID_LINEA AS value, DESCRIPCION_LINEA AS text 
+                    FROM LINEA 
+                    WHERE ID_SECCION = :id 
+                    ORDER BY ID_LINEA
+Resultados encontrados: 5
+[2024-12-11 21:45:59] Nueva solicitud
+Tipo: seccion, ID: 1
+Query: SELECT ID_SECCION AS value, DESCRIPCION_SECCION AS text 
+                      FROM SECCION 
+                      WHERE ID_AREA = :id 
+                      ORDER BY ID_SECCION
+Resultados encontrados: 2
+[2024-12-11 21:57:18] Nueva solicitud
+Tipo: seccion, ID: 1
+Query: SELECT ID_SECCION AS value, DESCRIPCION_SECCION AS text 
+                      FROM SECCION 
+                      WHERE ID_AREA = :id 
+                      ORDER BY ID_SECCION
+Resultados encontrados: 2
+[2024-12-11 21:59:33] Nueva solicitud
+Tipo: seccion, ID: 1
+Query: SELECT ID_SECCION AS value, DESCRIPCION_SECCION AS text 
+                      FROM SECCION 
+                      WHERE ID_AREA = :id 
+                      ORDER BY ID_SECCION
+Resultados encontrados: 2
+[2024-12-11 22:05:45] Nueva solicitud
+Tipo: seccion, ID: 1
+Query: SELECT ID_SECCION AS value, DESCRIPCION_SECCION AS text 
+                      FROM SECCION 
+                      WHERE ID_AREA = :id 
+                      ORDER BY ID_SECCION
+Resultados encontrados: 2

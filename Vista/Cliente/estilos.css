@@ -1,0 +1,592 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #0056b3; /* Color de la barra lateral */
+    color: white;
+    position: fixed; /* Fijo en la pantalla */
+    height: 100%;
+}
+
+.sidebar h1 {
+    padding: 20px;
+}
+
+.sidebar-nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    padding: 15px;
+}
+
+.sidebar-nav li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.main-content {
+    margin-left: 250px; /* Espacio para la barra lateral */
+    padding: 20px;
+}
+
+.section {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    overflow-x: auto; /* Permite el scroll horizontal */
+    margin-top: 20px; /* Espacio por encima de la tabla */
+}
+
+table {
+    width: 10%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Centrar la tabla */
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #efc313; /* Color de fondo para encabezados */
+}
+
+.edit-button {
+    background-color: #28a745; /* Color del botón de editar */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.save-button {
+    background-color: #007bff; /* Color del botón de guardar */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+:root {
+    --blue-primary: #0056b3;
+    --blue-secondary: #007bff;
+    --yellow-primary: #efc313;
+    --white: #ffffff;
+    --gray-light: #f8f9fa;
+    --gray-dark: #343a40;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--blue-primary);
+    color: var(--white);
+    padding: 20px;
+    position: fixed; /* Mantiene el panel fijo a la izquierda */
+    height: 100%; /* Hace que el panel ocupe toda la altura */
+    overflow-y: auto; /* Permite desplazamiento si es necesario */
+}
+
+.sidebar h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.sidebar-nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    background-color: var(--blue-secondary);
+}
+
+.main-content {
+    margin-left: 250px; /* Deja espacio para el panel */
+    padding: 20px;
+    background-color: var(--gray-light);
+    overflow-y: auto; /* Permite desplazamiento si es necesario */
+    height: 100vh; /* Asegura que ocupa toda la altura */
+}
+
+.table-container {
+    max-height: calc(90vh - 90px); /* Ajusta la altura de la tabla */
+    overflow-y: auto; /* Permite desplazamiento si es necesario */
+    margin:  auto; /* Centra el contenedor de la tabla */
+    width: hidden; /* Ajusta el ancho de la tabla al contenido */
+    max-width: 80%; /* Limita el ancho máximo de la tabla */
+}
+
+h2 {
+    color: var(--blue-primary);
+    margin-bottom: 20px;
+}
+
+table {
+    width: auto; /* La tabla se adapta al contenido */
+    border-collapse: collapse;
+    margin: auto; /* Centra la tabla */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Evita que el contenido se ajuste en varias líneas */
+}
+
+th {
+    background-color: var(--yellow-primary);
+    color: var(--gray-dark);
+}
+
+tbody tr:hover {
+    background-color: var(--blue-secondary);
+    color: var(--white);
+}
+
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.no-products {
+    text-align: center;
+    color: var(--gray-dark);
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f5d20e;
+    background-image: url('../../imagenes/fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center 135px; /* Ajusta el valor de "200px" según lo que necesites */
+    background-size: cover;
+}
+
+.header {
+    background-color: #0051D4;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+}
+
+.header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.header nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+.header nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilos del campo de búsqueda */
+#buscarLinea {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de enfoque */
+#buscarLinea:focus {
+    border-color: #f5d20e; /* Cambia el color para resaltar */
+    box-shadow: 0 0 10px rgba(245, 210, 14, 0.3);
+}
+
+/* Placeholder estilizado */
+#buscarLinea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+/* Estilos compartidos para campos de búsqueda */
+#buscarLinea, #buscarFamilia {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de enfoque compartido */
+#buscarLinea:focus, #buscarFamilia:focus {
+    border-color: #f5d20e; /* Cambia el color para resaltar */
+    box-shadow: 0 0 10px rgba(245, 210, 14, 0.3);
+}
+
+/* Placeholder estilizado compartido */
+#buscarLinea::placeholder, #buscarFamilia::placeholder {
+    color: #999;
+    font-style: italic;
+}
+/* Estilos para el campo de búsqueda */
+#buscarArea {
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de enfoque */
+#buscarArea:focus {
+    border-color: #f5d20e; /* Cambia el color del borde al hacer foco */
+    box-shadow: 0 0 10px rgba(245, 210, 14, 0.3);
+}
+
+/* Placeholder estilizado */
+#buscarArea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+/* Estilo del campo de búsqueda */
+#buscarSeccion {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de foco */
+#buscarSeccion:focus {
+    border-color: #f5d20e;
+    box-shadow: 0 0 10px rgba(245, 210, 14, 0.3);
+}
+
+/* Placeholder estilizado */
+#buscarSeccion::placeholder {
+    color: #999;
+    font-style: italic;
+}
+/* Estilo del campo de búsqueda */
+#buscarSubfamilia {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de enfoque */
+#buscarSubfamilia:focus {
+    border-color: #f5d20e;
+    box-shadow: 0 0 10px rgba(245, 210, 14, 0.3);
+}
+
+/* Placeholder estilizado */
+#buscarSubfamilia::placeholder {
+    color: #999;
+    font-style: italic;
+}
+/* Estilos del campo de búsqueda */
+#buscarMarca {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de enfoque */
+#buscarMarca:focus {
+    border-color: var(--yellow-primary); /* Color del borde al hacer foco */
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.3); /* Sombra para resaltar */
+}
+
+/* Placeholder estilizado */
+#buscarMarca::placeholder {
+    color: #999;
+    font-style: italic;
+}
+/* Estilos del campo de búsqueda */
+#buscarTipo {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de enfoque */
+#buscarTipo:focus {
+    border-color: var(--yellow-primary); /* Color del borde al hacer foco */
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.3); /* Sombra para resaltar */
+}
+
+/* Placeholder estilizado */
+#buscarTipo::placeholder {
+    color: #999;
+    font-style: italic;
+}
+/* Estilos del campo de búsqueda */
+#buscarProducto {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de enfoque */
+#buscarProducto:focus {
+    border-color: var(--yellow-primary); /* Color del borde al hacer foco */
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.3); /* Sombra para resaltar */
+}
+
+/* Placeholder estilizado */
+/* Placeholder style for the search input */
+#buscarProducto::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Main container for products with horizontal scroll */
+.product-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+    overflow-x: auto; /* Enable horizontal scroll */
+    padding: 20px;
+    gap: 20px;
+    scroll-snap-type: x mandatory; /* Smooth scrolling */
+    justify-content: center; /* Center align the product cards */
+    align-items: center; /* Vertically center the items */
+    width: 100%;
+    box-sizing: border-box; /* Prevent width overflow */
+}
+
+/* Styling for the scrollbar */
+.product-container::-webkit-scrollbar {
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.product-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+}
+
+.product-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Product card styles */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 250px;
+    min-width: 250px; /* Adjusted width for larger product display */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center; /* Align items centrally when scrolling */
+    transition: transform 0.2s;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within the card */
+    justify-content: flex-start; /* Keep content in the top */
+}
+
+/* Hover effect for product card */
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image styling */
+.product-card img {
+    width: 100%;
+    height: 180px; /* Adjusted height for larger display */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Product name styling */
+.product-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Product description styling */
+.product-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Price styling */
+.product-card .price {
+    font-size: 1.3rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Quantity input styling */
+.product-card input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button styling */
+.product-card button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.product-card button:hover {
+    background-color: #2980b9;
+}
+
+/* Offer tag */
+.offer-tag {
+    background-color: #0056b3;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Discount styling */
+.discount {
+    color: #43a047;
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+/* Free shipping tag */
+.product-shipping {
+    color: #43a047;
+    font-size: 0.9rem;
+}
+
+/* Container for the cart (if applicable) */
+.cart-container {
+    display: flex;
+    justify-content: center; /* Center align the cart */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Styling for each cart item */
+.cart-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Cart button */
+.cart-item button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #c0392b;
+}
+
+
+
+

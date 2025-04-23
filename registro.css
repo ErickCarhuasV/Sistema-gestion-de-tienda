@@ -1,0 +1,154 @@
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Permite que el body crezca según el contenido */
+    height: 100vh;
+    background-image: url('../../imagenes/fondoEditar.jpg');
+    margin: 0;
+    overflow-x: hidden;
+    align-items: flex-start;
+     background-size: cover;
+}
+
+.register-container {
+    background-color: #FEDA00; 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+    width: 450px;
+    max-width: 90%; /* Se adapta a pantallas pequeñas */
+    text-align: center; /* Centra el texto del formulario */
+}
+
+h2 {
+    text-align: center;
+    color: #333; 
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 50px; 
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    background-color: #5cb85c; 
+    color: white;
+    border: none;
+    border-radius: 4px; 
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003f9c; /* Hover más oscuro */
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    flex-grow: 1;
+}
+
+.icon {
+    margin-left: 10px; /* Espacio entre el campo y el ícono */
+    font-size: 18px;
+}
+
+.icon-success {
+    color: green;
+    font-weight: bold;
+}
+
+.icon-error {
+    color: red;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+/* Estilos para el error de la contraseña */
+#error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    display: none;
+}
+/* Botones de acción */
+input[type="submit"],
+button[type="button"] {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo del botón de "Agregar Usuario" */
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+}
+/* Estilo del label */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo del select */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto hover y focus en el select */
+select:hover,
+select:focus {
+    border-color: #5cb85c;
+    outline: none;
+}
+
+/* Estilo de las opciones dentro del select */
+option {
+    padding: 10px;
+}

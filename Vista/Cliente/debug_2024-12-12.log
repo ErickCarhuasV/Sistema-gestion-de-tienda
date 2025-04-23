@@ -1,0 +1,77 @@
+[2024-12-12 21:33:52] Nueva solicitud
+Tipo: seccion, ID: 1
+Query: SELECT ID_SECCION AS value, DESCRIPCION_SECCION AS text 
+                      FROM SECCION 
+                      WHERE ID_AREA = :id 
+                      ORDER BY ID_SECCION
+Resultados encontrados: 2
+[2024-12-12 21:33:53] Nueva solicitud
+Tipo: linea, ID: 1
+Query: SELECT ID_LINEA AS value, DESCRIPCION_LINEA AS text 
+                    FROM LINEA 
+                    WHERE ID_SECCION = :id 
+                    ORDER BY ID_LINEA
+Resultados encontrados: 5
+[2024-12-12 21:33:54] Nueva solicitud
+Tipo: familia, ID: 2
+Query: SELECT ID_FAMILIA AS value, DESCRIPCION_FAMILIA AS text 
+                      FROM FAMILIA 
+                      WHERE ID_LINEA = :id 
+                      ORDER BY ID_FAMILIA
+Resultados encontrados: 2
+[2024-12-12 21:35:04] Nueva solicitud
+Tipo: subfamilia, ID: 4
+Query: SELECT ID_SUBFAMILIA AS value, DESCRIPCION_SUBFAMILIA AS text 
+                         FROM SUBFAMILIA 
+                         WHERE ID_FAMILIA = :id 
+                         ORDER BY ID_SUBFAMILIA
+Resultados encontrados: 1
+[2024-12-12 21:35:57] Nueva solicitud
+Tipo: seccion, ID: 1
+Query: SELECT ID_SECCION AS value, DESCRIPCION_SECCION AS text 
+                      FROM SECCION 
+                      WHERE ID_AREA = :id 
+                      ORDER BY ID_SECCION
+Resultados encontrados: 2
+[2024-12-12 21:35:58] Nueva solicitud
+Tipo: linea, ID: 1
+Query: SELECT ID_LINEA AS value, DESCRIPCION_LINEA AS text 
+                    FROM LINEA 
+                    WHERE ID_SECCION = :id 
+                    ORDER BY ID_LINEA
+Resultados encontrados: 5
+[2024-12-12 21:36:01] Nueva solicitud
+Tipo: familia, ID: 1
+Query: SELECT ID_FAMILIA AS value, DESCRIPCION_FAMILIA AS text 
+                      FROM FAMILIA 
+                      WHERE ID_LINEA = :id 
+                      ORDER BY ID_FAMILIA
+Resultados encontrados: 2
+[2024-12-12 21:36:03] Nueva solicitud
+Tipo: subfamilia, ID: 1
+Query: SELECT ID_SUBFAMILIA AS value, DESCRIPCION_SUBFAMILIA AS text 
+                         FROM SUBFAMILIA 
+                         WHERE ID_FAMILIA = :id 
+                         ORDER BY ID_SUBFAMILIA
+Resultados encontrados: 3
+[2024-12-12 21:46:20] Nueva solicitud
+Tipo: seccion, ID: 9
+Query: SELECT ID_SECCION AS value, DESCRIPCION_SECCION AS text 
+                      FROM SECCION 
+                      WHERE ID_AREA = :id 
+                      ORDER BY ID_SECCION
+Resultados encontrados: 2
+[2024-12-12 21:46:22] Nueva solicitud
+Tipo: linea, ID: 19
+Query: SELECT ID_LINEA AS value, DESCRIPCION_LINEA AS text 
+                    FROM LINEA 
+                    WHERE ID_SECCION = :id 
+                    ORDER BY ID_LINEA
+Resultados encontrados: 0
+[2024-12-12 21:46:30] Nueva solicitud
+Tipo: seccion, ID: 1
+Query: SELECT ID_SECCION AS value, DESCRIPCION_SECCION AS text 
+                      FROM SECCION 
+                      WHERE ID_AREA = :id 
+                      ORDER BY ID_SECCION
+Resultados encontrados: 2
