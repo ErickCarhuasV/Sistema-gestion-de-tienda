@@ -1,5 +1,5 @@
 # Sistema-gestion-de-tienda-
-Sistema de gestión integral para tiendas con interfaces diferenciadas para administradores y clientes. Permite administrar inventario, gestionar usuarios y procesar ventas en tiempo real.
+Este proyecto fue desarrollado como parte de mi formación personal. Es un sistema de gestión integral para tiendas con interfaces diferenciadas para administradores y clientes. Permite administrar inventario, gestionar usuarios y procesar ventas en tiempo real.
 Actualmente en fase de pruebas y corrección de errores.
 ##  Objetivo del Proyecto
 El propósito del sistema es ofrecer una solución híbrida (escritorio + web) que permita:
